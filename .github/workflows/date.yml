@@ -14,8 +14,8 @@ jobs:
     steps: 
     - run: date
 
-  date_print_depends:
+  date_print_depend:
     needs: [date_print_ubuntu, date_print_windows]
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - run:  date
