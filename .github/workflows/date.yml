@@ -1,0 +1,21 @@
+name: print date job
+on: 
+  push: 
+    branch: main
+
+jobs: 
+  date_print_ubuntu 
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
+
+  date_print_windows
+    runs-on: windows-latest
+    steps: 
+    - run: date
+
+  date_print_depends
+    runs_on: ubuntu-latest
+    needs: [date_print_ubuntu, date_print_windows]
+    steps:
+    - run:  date
